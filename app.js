@@ -19,11 +19,12 @@ app.get('/', (req, res) => {
     res.sendFile(__dirname + '/signup.html');
 });
 
+const theKey = process.env.KEY;
 
-mailchimp.setConfig({
-    apiKey: process.env.KEY,
-    server: "us10"
-});
+// mailchimp.setConfig({
+//     apiKey: process.env.KEY,
+//     server: "us10"
+// });
 
 
 app.post('/', (req, res) => {
@@ -53,8 +54,9 @@ app.post('/', (req, res) => {
 
     const options = {
         method: 'POST',
+        //auth: `omar: ${process.env.KEY}`
         headers: {
-            Authorization: `OAuth ${process.env.KEY}`
+            Authorization: `OAuth ${theKey}`
         }
     };
 
