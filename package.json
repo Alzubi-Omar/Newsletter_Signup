@@ -2,7 +2,8 @@
   "name": "newsletter-signup",
   "version": "1.0.0",
   "description": "\u001b[A\u001b[B\u001b[B\u001b[ANewsletter Signup",
-  "main": "app.js",
+  "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node app.js"
